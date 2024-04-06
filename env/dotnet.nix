@@ -8,6 +8,6 @@ pkgs.mkShell {
       sdk_7_0
       sdk_8_0
     ])
-    msbuild
   ];
+  buildInputs = [ pkgs.msbuild ];
 }
