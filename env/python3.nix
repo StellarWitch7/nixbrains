@@ -1,8 +1,8 @@
-with import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
 
-mkShell {
+pkgs.mkShell {
   name = "python3-env";
-  packages = [
+  packages = with pkgs; [
     python311Full
     (writeShellScriptBin "python" ''
       exec python3 "$@"
