@@ -8,6 +8,7 @@ pkgs.mkShell {
     clang
     cargo
     rustfmt
+    cmake
   ];
 
   RUST_BACKTRACE = 1;
